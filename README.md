@@ -1,4 +1,4 @@
-In this repository I will be tackling thhe following task: 
+In this repository, I will be tackling the following task: 
 
 **S.T.A.R. Framework**
 
