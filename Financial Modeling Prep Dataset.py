@@ -5,6 +5,7 @@ import pandas as pd
 
 
 # FTSE 100 code array
+# Upon runnign the code using this array I was getting several missing outputs 
 FTSE_Symbols = [
                 # 'RTO', 'IMB', 'BRBY', 'BEZ', 'BATS', 'MTLN', 'SHEL', 'ABF', 'CRDA', 'DGE',
                 # 'HLN', 'NG', 'MKS', 'UU', 'PSH', 'GLEN', 'AUTO', 'AHT', 'MNG', 'CCEP', 
@@ -21,8 +22,8 @@ FTSE_Symbols = [
 # S&P 500 code array 
 # I initially wanted to look at the FTSE 100 but it seems like the FMP API only deals with US traded companies
 SP500_Symbols = [
-                "MMM", "AOS", "ABT", "ABBV", "ACN", "ATVI", "ADM", "ADBE", "AAP", "AMD", "AES", "AFL", "A", "APD"
-                # "AKAM", "ALK", "ALB", "ARE", "ALGN", "ALLE", "LNT", "ALL", "GOOGL", "GOOG", "MO", "AMZN", "AMCR",
+                "MMM", "AOS", "ABT", "ABBV", "ACN", "ATVI", "ADM", "ADBE", "AAP", "AMD", "AES", "AFL", "A", "APD",
+                "AKAM", "ALK", "ALB", "ARE", "ALGN", "ALLE", "LNT", "ALL", "GOOGL", "GOOG", "MO", "AMZN", "AMCR"
                 # "AEE", "AAL", "AEP", "AXP", "AIG", "AMT", "AWK", "AMP", "ABC", "AME", "AMGN", "APH", "ADI", "ANSS",
                 # "ANTM", "AON", "AOS", "APA", "AAPL", "AMAT", "APTV", "AGNC", "BXP", "BKR", "BBWI", "BG", "BF.B", "CHRW",
                 # "CA", "COF", "CAH", "CBOE", "KMX", "CCL", "CAT", "CBOE", "CBRE", "CDNS", "CZR", "CF", "CFG", "CHD",
@@ -61,7 +62,7 @@ urls = []
 #     link = "https://financialmodelingprep.com/stable/profile?symbol=" + company + "&apikey=F4h1wP95SrsrfPZT6M28hUdUxIYYX27q"
 #     urls.append(link)
 
-# Making code more concise with list comprehension but achieves same outcome as line 25-26 
+# Making code more concise with list comprehension 
 urls = ["https://financialmodelingprep.com/stable/profile?symbol=" + company + "&apikey=F4h1wP95SrsrfPZT6M28hUdUxIYYX27q" for company in SP500_Symbols]
 
 try:
@@ -78,14 +79,14 @@ def get_jsonparsed_data(url):
 df = []
 
 for url in urls: 
-    df.append(get_jsonparsed_data(url))
+    df.append(pd.DataFrame(get_jsonparsed_data(url)))
 
 
-
-# Creating dataframe with data
-df = pd.DataFrame(df)
+# Merging DataFrames 
+df = pd.concat(df)
 
 # Exporting Data
 df.to_excel('FMP Dataset.xlsx', index = False)
 
 
+ 
