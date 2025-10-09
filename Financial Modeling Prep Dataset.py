@@ -22,8 +22,8 @@ FTSE_Symbols = [
 # S&P 500 code array 
 # I initially wanted to look at the FTSE 100 but it seems like the FMP API only deals with US traded companies
 SP500_Symbols = [
-                "MMM", "AOS", "ABT", "ABBV", "ACN", "ATVI", "ADM", "ADBE", "AAP", "AMD", "AES", "AFL", "A", "APD",
-                "AKAM", "ALK", "ALB", "ARE", "ALGN", "ALLE", "LNT", "ALL", "GOOGL", "GOOG", "MO", "AMZN", "AMCR"
+                # "MMM", "AOS", "ABT", "ABBV", "ACN", "ATVI", "ADM", "ADBE", "AAP", "AMD", "AES", "AFL", "A", "APD",
+                # "AKAM", "ALK", "ALB", "ARE", "ALGN", "ALLE", "LNT", "ALL", "GOOGL", "GOOG", "MO", "AMZN", "AMCR",
                 # "AEE", "AAL", "AEP", "AXP", "AIG", "AMT", "AWK", "AMP", "ABC", "AME", "AMGN", "APH", "ADI", "ANSS",
                 # "ANTM", "AON", "AOS", "APA", "AAPL", "AMAT", "APTV", "AGNC", "BXP", "BKR", "BBWI", "BG", "BF.B", "CHRW",
                 # "CA", "COF", "CAH", "CBOE", "KMX", "CCL", "CAT", "CBOE", "CBRE", "CDNS", "CZR", "CF", "CFG", "CHD",
@@ -38,21 +38,21 @@ SP500_Symbols = [
                 # "HAS", "HCA", "PEAK", "HSIC", "HSY", "HES", "HPE", "HLT", "HOLX", "HD", "HON", "HRL", "HST", "HPQ", "HSIC",
                 # "HUM", "HBAN", "HII", "IEX", "IDXX", "INFO", "ITW", "ILMN", "INCY", "IR", "INTC", "ICE", "IBM", "IP", "IPG",
                 # "IFF", "INTU", "ISRG", "IVZ", "IPGP", "IQV", "IRM", "JKHY", "J", "JBHT", "SJM", "JNJ", "JCI", "JPM", "JNPR",
-                # "KSU", "K", "KEY", "KEYS", "KMB", "KIM", "KMI", "KLAC", "KHC", "KR", "LHX", "LH", "LRCX", "LW", "LVS", "LDOS",
-                # "LEN", "LLY", "LNC", "LYV", "LKQ", "LMT", "L", "LOW", "LYB", "MTB", "M", "MAC", "MCD", "MCK", "MDT", "MRK",
-                # "MET", "MTD", "MGM", "MCHP", "MU", "MSFT", "MA", "MAA", "MRNA", "MHK", "TAP", "MDLZ", "MPWR", "MNST", "MCO",
-                # "MS", "MSI", "MSCI", "MYL", "NDAQ", "NOV", "NKTR", "NEE", "NLSN", "NKE", "NI", "NBL", "NSC", "NTRS", "NOC",
-                # "NLOK", "NCLH", "NRG", "NUE", "NVDA", "NVR", "NXPI", "ORLY", "OXY", "ODFL", "OMC", "OKE", "ORCL", "OTIS",
-                # "PCAR", "PKG", "PARA", "PH", "PAYX", "PAYC", "PYPL", "PNR", "PBCT", "PPL", "PFG", "PG", "PGR", "PLD", "PRU",
-                # "PTC", "PEG", "PSA", "PHM", "PVH", "QRVO", "PWR", "QCOM", "DGX", "RL", "RJF", "RTX", "O", "REG", "REGN",
-                # "RF", "RSG", "RMD", "RHI", "ROK", "ROL", "ROP", "ROST", "RCL", "SPGI", "CRM", "SBAC", "SLB", "STX", "SEE",
-                # "SRE", "NOW", "SHW", "SPG", "SWKS", "SLG", "SNA", "SO", "LUV", "SPG", "SWKS", "SNA", "SO", "LUV", "SWKS",
-                # "SPG", "SWKS", "SNA", "SO", "LUV", "SWKS", "SNA", "SO", "LUV", "SO", "LUV", "SBUX", "STT", "STE", "SYK",
-                # "SIVB", "SNA", "SNPS", "SYY", "TMUS", "TROW", "TTWO", "TPR", "TGT", "TEL", "FTI", "TDY", "TFX", "TER", "TSLA",
-                # "TXN", "TXT", "TMO", "TJX", "TSCO", "TT", "TDG", "TRV", "TRMB", "TFC", "TWTR", "TYL", "TSN", "UDR", "ULTA",
-                # "USB", "UAA", "UA", "UNP", "UAL", "UNH", "UPS", "URI", "UHS", "UNM", "VLO", "VAR", "VTR", "VRSN", "VRSK", "VZ",
-                # "VRTX", "VFC", "VIAC", "V", "VMC", "WRB", "WAB", "WMT", "WAT", "WM", "WEC", "WELL", "WST", "WDC", "WU", "WRK",
-                # "WY" ,"WHR" ,"WMB" ,"WLTW" ,"WYNN" ,"XEL" ,"XLNX" ,"XOM" ,"XRAY" ,"XYL" ,"YUM" ,"ZBRA" ,"ZBH" ,"ZION" ,"ZTS"
+                "KSU", "K", "KEY", "KEYS", "KMB", "KIM", "KMI", "KLAC", "KHC", "KR", "LHX", "LH", "LRCX", "LW", "LVS", "LDOS",
+                "LEN", "LLY", "LNC", "LYV", "LKQ", "LMT", "L", "LOW", "LYB", "MTB", "M", "MAC", "MCD", "MCK", "MDT", "MRK",
+                "MET", "MTD", "MGM", "MCHP", "MU", "MSFT", "MA", "MAA", "MRNA", "MHK", "TAP", "MDLZ", "MPWR", "MNST", "MCO",
+                "MS", "MSI", "MSCI", "MYL", "NDAQ", "NOV", "NKTR", "NEE", "NLSN", "NKE", "NI", "NBL", "NSC", "NTRS", "NOC",
+                "NLOK", "NCLH", "NRG", "NUE", "NVDA", "NVR", "NXPI", "ORLY", "OXY", "ODFL", "OMC", "OKE", "ORCL", "OTIS",
+                "PCAR", "PKG", "PARA", "PH", "PAYX", "PAYC", "PYPL", "PNR", "PBCT", "PPL", "PFG", "PG", "PGR", "PLD", "PRU",
+                "PTC", "PEG", "PSA", "PHM", "PVH", "QRVO", "PWR", "QCOM", "DGX", "RL", "RJF", "RTX", "O", "REG", "REGN",
+                "RF", "RSG", "RMD", "RHI", "ROK", "ROL", "ROP", "ROST", "RCL", "SPGI", "CRM", "SBAC", "SLB", "STX", "SEE",
+                "SRE", "NOW", "SHW", "SPG", "SWKS", "SLG", "SNA", "SO", "LUV", "SPG", "SWKS", "SNA", "SO", "LUV", "SWKS",
+                "SPG", "SWKS", "SNA", "SO", "LUV", "SWKS", "SNA", "SO", "LUV", "SO", "LUV", "SBUX", "STT", "STE", "SYK",
+                "SIVB", "SNA", "SNPS", "SYY", "TMUS", "TROW", "TTWO", "TPR", "TGT", "TEL", "FTI", "TDY", "TFX", "TER", "TSLA",
+                "TXN", "TXT", "TMO", "TJX", "TSCO", "TT", "TDG", "TRV", "TRMB", "TFC", "TWTR", "TYL", "TSN", "UDR", "ULTA",
+                "USB", "UAA", "UA", "UNP", "UAL", "UNH", "UPS", "URI", "UHS", "UNM", "VLO", "VAR", "VTR", "VRSN", "VRSK", "VZ",
+                "VRTX", "VFC", "VIAC", "V", "VMC", "WRB", "WAB", "WMT", "WAT", "WM", "WEC", "WELL", "WST", "WDC", "WU", "WRK",
+                "WY" ,"WHR" ,"WMB" ,"WLTW" ,"WYNN" ,"XEL" ,"XLNX" ,"XOM" ,"XRAY" ,"XYL" ,"YUM" ,"ZBRA" ,"ZBH" ,"ZION" ,"ZTS"
                 ]
 
 # Stock Symbol Search API
@@ -86,7 +86,7 @@ for url in urls:
 df = pd.concat(df)
 
 # Exporting Data
-df.to_excel('FMP Dataset.xlsx', index = False)
+df.to_excel('FMP Dataset 2.xlsx', index = False)
 
 
  
